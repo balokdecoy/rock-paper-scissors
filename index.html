@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Rock, Paper, Scissors!</h1>
+
+    <script>
+
+        var userChoices = ["r", "p", "s"];
+        var computerChoices = ["r", "p", "s"];
+
+        var wins = 0;
+        var losses = 0;
+        var ties = 0;
+
+        for (var i = 0; i < 10; i++) {
+
+            var computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
+
+            console.log(computerGuess);
+
+            var userGuess = prompt("Enter r, p, or s to play!")
+            userGuess = userGuess.toLowerCase();
+
+            console.log(userGuess);
+
+            if (userGuess === 'r' || userGuess === 'p' || userGuess === 's') {
+                alert("The computer chose " + computerGuess);
+                
+                if (userGuess === 'r' && computerGuess === 's') ||
+                    (userGuess === 's' && computerGuess === 'p') ||
+                    (userGuess === 'p' && computerGuess === 'r') {
+                    wins++;
+                    alert("You have won " + wins + "time(s)!")
+                else if (userGuess === computerGuess) {
+                    ties++;
+                    alert("You have tied " + ties "time(s)");
+                }
+                else {
+                    losses++;
+                    alert("You have lost " + losses "time(s)!");
+                }
+                    
+                }
+                    }
+
+            }
+
+    </script>
+</body>
+</html>
