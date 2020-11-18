@@ -57,11 +57,11 @@
             alert("Congratulations! You beat the computer at a child's game!" +
             "\nTotal wins: " + wins + "\nTotal ties: " + ties + "\nTotal losses: " + losses);
         }
-        else if (ties > wins && ties > losses) {
+        else if (ties > wins && ties > losses || ties === wins && ties > losses) {
             alert("You and the computer have tied. You're as intelligent as roughly 70 lines of code." +
             "\nTotal wins: " + wins + "\nTotal ties: " + ties + "\nTotal losses: " + losses);
         }
-        else if (losses > wins && losses > ties) {
+        else {
             alert("You have lost to the computer. In the course of human history, ultimately, this was inevitable." +
             "\nTotal wins: " + wins + "\nTotal ties: " + ties + "\nTotal losses: " + losses);
         }
