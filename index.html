@@ -54,13 +54,16 @@
         console.log(losses);
         
         if (wins > losses && wins > ties) {
-            alert("Congratulations! You beat the computer at a child's game!");
+            alert("Congratulations! You beat the computer at a child's game!" +
+            "\nTotal wins: " + wins + "\nTotal ties: " + ties + "\nTotal losses: " + losses);
         }
         else if (ties > wins && ties > losses) {
-            alert("You and the computer have tied. Fair enough." );
+            alert("You and the computer have tied. Fair enough." +
+            "\nTotal wins: " + wins + "\nTotal ties: " + ties + "\nTotal losses: " + losses);
         }
         else if (losses > wins && losses > ties) {
-            alert("You have lost to the computer. In the course of human history, ultimately, this was inevitable.");
+            alert("You have lost to the computer. In the course of human history, ultimately, this was inevitable." +
+            "\nTotal wins: " + wins + "\nTotal ties: " + ties + "\nTotal losses: " + losses);
         }
                     
     </script>
